@@ -1,0 +1,25 @@
+<header>
+    <div class="nav">
+        <a routerLink="/home"><i class='bx bxs-left-arrow-circle'></i></a>
+        <img src="../../../assets/public/images/logo-rick.png" alt="logo-rick">
+        <span><i class='bx bxs-invader'></i> Ola, user</span>
+    </div>
+</header>
+<section class="details">
+
+    <div class="character" *ngIf="character">
+
+        <div class="image">
+            <img [src]="character.image" alt="{{character.name}}">
+            <h1>{{character.name}}</h1>
+        </div>
+
+        <div class="character-detail">
+            <h2>From: {{character.location.name}}</h2>
+            <h2>Origin: {{character.origin.name}}</h2>
+            <h2>Type: {{character.species}}</h2>
+            <h2>Gender: {{character.gender}}</h2>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,63 @@
+section.login{
+    background: url('../../../assets/public/images/rick-2k.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acount{
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #ffffff10;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 70px;
+}
+
+.acount h2{
+    color: #62a4ab;
+    margin-bottom: 20px;
+    font-family: cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.acount form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.acount form input{
+    width: 270px;
+    height: 30px;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.btns{
+    display: flex;
+    gap: 10px;
+}
+
+.btns button{
+    cursor: pointer;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    width: 130px;
+    height: 30px;
+    transition: .3s;
+}
+.btns button:hover{
+    scale: 1.12;
+    transition: .3s;
+}

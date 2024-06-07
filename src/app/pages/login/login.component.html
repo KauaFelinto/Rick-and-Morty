@@ -1,0 +1,13 @@
+<section class="login">
+    <div class="acount">
+        <img src="../../../assets/public/images/logo-rick.png" alt="">
+        <h2>Ola! digite seu nome de usuario</h2>
+        <form action="submit">
+            <input type="text" placeholder="Username" [(ngModel)]="singUpObj.username" name="text" />
+            <div class="btns">
+                <button (click)="onSingUp()" routerLink="/home">Entrar</button>
+                <button routerLink="/home">Entrar sem user</button>
+            </div>
+        </form>
+    </div>
+</section>

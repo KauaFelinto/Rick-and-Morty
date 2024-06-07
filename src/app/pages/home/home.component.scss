@@ -1,0 +1,109 @@
+section.cover{
+    display: flex;
+    background-color: #3d373c;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+}
+
+.container .sidenav{
+    width: 115px;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    padding: 32px 16px;
+    background-color: #477385;
+    transition: width 0.6s;
+}
+
+label .close-btn{
+    display: none;
+}
+
+
+.sidenav .icon_items ul{
+    list-style: none;
+    margin-top: 32px;
+    padding: 0 10px;
+}
+
+.sidenav .icon_items ul li{
+    cursor: pointer;
+    margin: 4px;
+    padding: 12px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease;
+}
+
+.icon_items .active,
+.sidenav .icon_items ul li:hover{
+    background: #2f9331;
+}
+
+.sidenav .icon_items ul li i{
+    font-size: 26px;
+    padding: 0 12px;
+}
+
+.sidenav .icon_items ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    padding-left: 18px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+#click{
+    display: none;
+}
+
+.container label i{
+    position: absolute;
+    left: 2.3%;
+    top: 1.5%;
+    font-size: 24px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#click:checked ~ .sidenav{
+    width: 260px;
+}
+
+#click:checked ~ .sidenav .icon_items ul li a{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#click:checked ~ .sidenav .logo h2{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#click:checked ~ .sidenav .search_bar input{
+    width: 100%;
+    margin-left: 0;
+}
+
+#click:checked ~ .sidenav .search_bar i{
+    left: 20px;
+}
+
+#click:checked ~ label{
+    left: 1%;
+}
+
+#click:checked ~ label .close-btn{
+    display: block;
+}
+
+#click:checked ~ label .menu-btn{
+    display: none;
+}

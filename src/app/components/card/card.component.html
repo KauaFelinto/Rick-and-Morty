@@ -1,0 +1,29 @@
+<div class="search">
+    <a routerLink="/home"><img src="../../../assets/public/images/logo-rick.png" alt="logo"></a>
+    <input id="busca" type="search" [(ngModel)]="params.name" (input)="searchCharacters()" placeholder="Search" />
+</div>
+<section class="grid"
+infiniteScroll
+[infiniteScrollDistance]="2"
+[infiniteScrollThrottle]="50"
+(scrolled)="getCharacters($event)"
+>
+
+
+@for(c of characters; track characters){
+    <div routerLink="/character-detail/{{c.id}}" class="card-list">    
+        <div class="card">
+            <img [src]="c.image" alt="icon">
+
+            <div class="info">
+                <h3>{{c.name}}</h3>
+                <p>Status: <span>{{c.status}}</span></p>
+                <p>From: {{c.location.name}}</p>
+            </div>
+
+        </div>
+    </div>
+}
+</section>
+
+<router-outlet></router-outlet>
